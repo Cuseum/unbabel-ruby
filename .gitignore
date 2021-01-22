@@ -34,3 +34,6 @@ build/
 .rvmrc
 
 Gemfile.lock
+
+# IDE related files
+.idea
