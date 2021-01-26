@@ -22,6 +22,7 @@ class Unbabel
       resp.url(endpoint)
       resp.headers['Authorization'] = "ApiKey #{@username}:#{@apikey}"
       resp.headers['Content-Type'] = 'application/json'
+      resp.headers['User-Agent'] = 'Faraday'
 
       params.each { |key, value| resp.params[key] = value }
       resp.body = data.to_json unless method == 'get'
